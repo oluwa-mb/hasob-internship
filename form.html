@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>-->
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Start Heading-->
+    <section class="form-heading">
+        <div class="section-title">
+            <h1>Wel<span>c</span>ome</h1>
+    
+            <h2>Thank you for the time you are taking to complete this form. Your answers will be held in the strictest confidentiality</h2>
+        </div>
+    </section>
+    <!--End Heading-->
+    
+    <!--Start Form-->
+    <section class="form-body error">
+        <div class="form-control success">
+            <form class="form" id="form" method="post" action="" novalidate>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <div class="form-group">
+                                <p>How old are you?</p>
+                                <div class="form-check" onchange="ValidateForm()">
+                                    <label for="15 - 18 years">
+                                        <input id="15 - 18 years" type="radio" name="gender" value="15 - 18 years" required>  15 -18 years
+                                    </label>
+                                <br>
+
+                                    <label for="19 - 24 years">
+                                        <input id="19 - 24 years" type="radio" name="gender" value="19 - 24 years">  19 - 24 years
+                                    </label>
+                                <br>
+
+                                    <label for="25 - 31 years">
+                                        <input id="25 - 31 years" type="radio" name="gender" value="25 - 31 years">  25 - 31 years
+                                    </label>
+                                <br>
+                                
+                                    <label for="32 and above">
+                                        <input id="32 and above" type="radio" name="gender" value="32 and above">  32 and above
+                                    </label>
+                                    <div id="errorRadios"></div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <div class="form-group">
+                                <p>Relationship Status</p>
+                                <div class="form-check">
+                                    <select name="dropdown" id="dropDwn"  onchange="ValidateForm()">
+                                        <option hidden selected value="">Select</option>
+                                        <option class="dropDwn" value="1">Single</option>
+                                        <option class="dropDwn" value="2">Married</option>
+                                        <option class="dropDwn" value="3">In an Entanglement</option>
+                                        <option class="dropDwn" value="4">Divorced</option>
+                                    </select>
+                                    <div id="errordropDwn"></div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <br>
+
+                        <li>
+                            <div class="form-group">
+                                <p>Interests</p>
+                                <h3>
+                                    You can choose more than one answer
+                                </h3>
+                                <div class="form-check" required onchange="ValidateForm()">
+                                    <label for="Video Games">
+                                        <input id="Video Games" type="checkbox" name="interests" onchange="validateCheckbox()">  Video Games
+                                    </label>
+                                    <br>
+                                    <label for="Music">
+                                        <input id="Music" type="checkbox" name="interests" onchange="validateCheckbox()">  Music
+                                    </label>
+                                    <br>
+                                    <label for="Reading Books">
+                                        <input id="Reading Books" type="checkbox" name="interests" onchange="validateCheckbox()">  Reading Books
+                                    </label>
+                                    <br>
+                                    <label for="Arts">
+                                        <input id="Arts" type="checkbox" name="interests" onchange="validateCheckbox()">  Arts
+                                    </label>
+                                    <div id="errorCheckbox"></div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <div class="form-group">
+                                <p class="email">Email</p>
+                                <div class="form-check" >
+                                    <input id="email" type="email" placeholder="Email Address" required onchange="ValidateForm()">
+                                    <div id="errorEmail"></div>
+                                </div>
+                            </div>
+                        </li>
+              
+                    </ul>
+
+                    <br>
+
+                <!--Start Button-->
+                    <button class="submitBtn" id="submitBtn" type="submit"><strong>Submit</strong></button>
+                <!--End Button-->
+
+            </form>
+
+            <br>
+
+            <!--copyright statement-->
+            <section>
+                <div>
+                    <h5 class="small">&copy Mbuotidem Ekpro 2020</h5>
+                </div>
+            </section>
+            <!--copyright statement-->
+
+        </div>
+    </section>
+  <!--End Form-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
